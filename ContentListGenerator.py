@@ -3,6 +3,11 @@ import re
 import os
 from argparse import ArgumentParser
 
+## Parse the title list into a content list
+def generateContentsList(markDownTitleList):
+    print(markDownTitleList)
+    return
+
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
     return
