@@ -16,6 +16,9 @@ def generateContentsList(markDownTitleList):
             chapterCount += 1
             titleName = title.replace('##', '').strip()
             titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
+            contentListEntry = str(chapterCount) + ". [" + titleName + "](" + titleNameTag + ")"
+            lastTitle = contentListEntry
+            generatedContentsList[contentListEntry] = {}
         ## Check if the title is a sub-title
         elif title.count('#') == 3:
             titleName = title.replace('###', '').strip()
