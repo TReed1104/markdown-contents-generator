@@ -7,7 +7,8 @@ from argparse import ArgumentParser
 def writeContentListToFile(contentListDict):
     print(">> Writing Output File...")
     try:
-        outputFile = open("test.md", "w")   ## Open the file to output to
+        fileTitle = "output/content_list_" + datetime.now().strftime("%Y%d%m_%H%M%S") + ".md"   ## Generate the file name
+        outputFile = open("fileTitle", "w")   ## Open the file to output to
         outputFile.close()                          ## Close the file and save the output
         print(">> Output Saved!")
     except (OSError, IOError) as e:
