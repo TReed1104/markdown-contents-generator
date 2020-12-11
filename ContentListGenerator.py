@@ -33,15 +33,13 @@ def generateContentsList(markDownTitleList):
         if title.count('#') == 2:
             chapterCount += 1
             titleName = title.replace('##', '').strip()
-            titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
-            contentListEntry = str(chapterCount) + ". [" + titleName + "](" + titleNameTag + ")"
+            contentListEntry = str(chapterCount) + ". [" + titleName + "](#" + titleNameTag + ")"
             lastTitle = contentListEntry
             generatedContentsList[contentListEntry] = {}
         ## Check if the title is a sub-title
         elif title.count('#') == 3:
             titleName = title.replace('###', '').strip()
-            titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
-            contentListEntry = "* [" + titleName + "](" + titleNameTag + ")"
+            contentListEntry = "* [" + titleName + "](#" + titleNameTag + ")"
             generatedContentsList[lastTitle][contentListEntry] = {}
     ## Write the content list to file
     writeContentListToFile(generatedContentsList)
