@@ -1,6 +1,6 @@
-import sys
 import re
 import os
+from datetime import datetime
 from argparse import ArgumentParser
 
 ## Write the contents list to text file
