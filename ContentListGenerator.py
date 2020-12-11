@@ -19,6 +19,9 @@ def parseMarkdownFile(filePath):
             markdownTitleList.append(line)
     markdownFile.close()                ## Close the markdown file
 
+    ## Pass the title list to the content list generator
+    generateContentsList(markdownTitleList)
+
 def main():
     # Register the program's command line arguments
     parser = ArgumentParser(description='Markdown contents list generator.')
