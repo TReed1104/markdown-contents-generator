@@ -12,6 +12,11 @@ def generateContentsList(markDownTitleList):
 def parseMarkdownFile(filePath):
     markdownTitleList = []              ## List of all the found titles in the markdown file
     markdownFile = open(filePath, "r")  ## Open the markdown file
+    ## Read the file
+    for line in markdownFile:
+        ## If the line starts with a title marker
+        if line[0:6].find("#") != -1:
+            markdownTitleList.append(line)
     markdownFile.close()                ## Close the markdown file
 
 def main():
