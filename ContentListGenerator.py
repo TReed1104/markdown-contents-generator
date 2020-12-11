@@ -6,6 +6,14 @@ from argparse import ArgumentParser
 ## Write the contents list to text file
 def writeContentListToFile(contentListDict):
     print(">> Writing Output File...")
+    try:
+        outputFile = open("test.md", "w")   ## Open the file to output to
+        outputFile.close()                          ## Close the file and save the output
+        print(">> Output Saved!")
+    except (OSError, IOError) as e:
+        ## Catch errors in the file stream
+        print(">>>> ERROR! - An error occured: ", e)
+
 ## Parse the title list into a content list
 def generateContentsList(markDownTitleList):
     print(">> Parsing Titles...")
