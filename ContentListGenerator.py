@@ -3,6 +3,9 @@ import re
 import os
 from argparse import ArgumentParser
 
+## Write the contents list to text file
+def writeContentListToFile(contentListDict):
+    print(">> Writing Output File...")
 ## Parse the title list into a content list
 def generateContentsList(markDownTitleList):
     print(">> Parsing Titles...")
