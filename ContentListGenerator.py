@@ -17,6 +17,7 @@ def parseMarkdownFile(filePath):
         ## If the line starts with a title marker
         if line[0:6].find("#") != -1:
             line = line.replace('\r', '').replace('\n', '') ## Strip the carriage returns and newlines
+            line.strip()    ## Strip and pre/post whitespace
             markdownTitleList.append(line)
     markdownFile.close()                ## Close the markdown file
 
