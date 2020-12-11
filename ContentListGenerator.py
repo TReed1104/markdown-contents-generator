@@ -20,6 +20,11 @@ def main():
         print(">> Creating the output directory")
     except FileExistsError:
         pass
+
+    ## Check we have an input file
+    if arguments.input is not None:
+        parseMarkdownFile(arguments.input)
+
 ## App entry
 if __name__ == '__main__':
     main()
