@@ -8,7 +8,7 @@ def writeContentListToFile(contentListDict):
     print(">> Writing Output File...")
     try:
         fileTitle = "output/content_list_" + datetime.now().strftime("%Y%d%m_%H%M%S") + ".md"   ## Generate the file name
-        outputFile = open("fileTitle", "w")   ## Open the file to output to
+        outputFile = open(fileTitle, "w")   ## Open the file to output to
         ## Iterate our chapter titles
         for mainTitleKey in contentListDict:
             outputFile.write(mainTitleKey + "\n")
