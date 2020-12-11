@@ -23,6 +23,8 @@ def generateContentsList(markDownTitleList):
         elif title.count('#') == 3:
             titleName = title.replace('###', '').strip()
             titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
+            contentListEntry = "* [" + titleName + "](" + titleNameTag + ")"
+            generatedContentsList[lastTitle][contentListEntry] = {}
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
