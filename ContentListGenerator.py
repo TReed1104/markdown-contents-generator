@@ -29,6 +29,9 @@ def generateContentsList(markDownTitleList):
             contentListEntry = "* [" + titleName + "](" + titleNameTag + ")"
             generatedContentsList[lastTitle][contentListEntry] = {}
 
+    ## Write the content list to file
+    writeContentListToFile(generatedContentsList)
+
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
     print(">> Reading file...")
