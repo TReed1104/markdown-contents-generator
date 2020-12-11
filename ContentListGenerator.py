@@ -10,7 +10,10 @@ def generateContentsList(markDownTitleList):
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
-    return
+    markdownTitleList = []              ## List of all the found titles in the markdown file
+    markdownFile = open(filePath, "r")  ## Open the markdown file
+    markdownFile.close()                ## Close the markdown file
+
 def main():
     # Register the program's command line arguments
     parser = ArgumentParser(description='Markdown contents list generator.')
