@@ -31,6 +31,9 @@ def generateContentsList(markDownTitleList):
     for title in markDownTitleList:
         ## Check if the title is a chapter title
         if title.count('#') == 2:
+            ## Skip the chapter title if its a content page
+            if title.find("Contents Page") != -1:
+                continue
             chapterCount += 1
             titleName = title.replace('##', '').strip()
             titleNameTag = re.sub(r'([^\s\w-]|_)+', '', titleName).lower().replace(' ', '-')
