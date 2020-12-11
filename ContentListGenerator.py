@@ -3,6 +3,9 @@ import re
 import os
 from argparse import ArgumentParser
 
+## Extract the titles from the markdown
+def parseMarkdownFile(filePath):
+    return
 def main():
     # Register the program's command line arguments
     parser = ArgumentParser(description='Markdown contents list generator.')
