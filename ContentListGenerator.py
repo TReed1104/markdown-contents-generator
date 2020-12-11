@@ -1,3 +1,8 @@
+import sys
+import re
+import os
+from argparse import ArgumentParser
+
 def main():
     # Register the program's command line arguments
     parser = ArgumentParser(description='Markdown contents list generator.')
