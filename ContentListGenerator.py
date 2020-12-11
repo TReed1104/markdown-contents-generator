@@ -5,8 +5,10 @@ from argparse import ArgumentParser
 
 ## Parse the title list into a content list
 def generateContentsList(markDownTitleList):
-    print(markDownTitleList)
-    return
+    print(">> Parsing Titles...")
+    generatedContentsList = {}
+    chapterCount = 0
+    lastTitle = ""
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
