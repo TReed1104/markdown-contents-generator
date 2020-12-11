@@ -28,7 +28,6 @@ def generateContentsList(markDownTitleList):
             titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
             contentListEntry = "* [" + titleName + "](" + titleNameTag + ")"
             generatedContentsList[lastTitle][contentListEntry] = {}
-
     ## Write the content list to file
     writeContentListToFile(generatedContentsList)
 
@@ -45,7 +44,6 @@ def parseMarkdownFile(filePath):
             line.strip()    ## Strip and pre/post whitespace
             markdownTitleList.append(line)
     markdownFile.close()                ## Close the markdown file
-
     ## Pass the title list to the content list generator
     generateContentsList(markdownTitleList)
 
