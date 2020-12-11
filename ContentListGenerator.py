@@ -9,6 +9,12 @@ def writeContentListToFile(contentListDict):
     try:
         fileTitle = "output/content_list_" + datetime.now().strftime("%Y%d%m_%H%M%S") + ".md"   ## Generate the file name
         outputFile = open("fileTitle", "w")   ## Open the file to output to
+        ## Iterate our chapter titles
+        for mainTitleKey in contentListDict:
+            outputFile.write(mainTitleKey + "\n")
+            ## Iterate the chapter sub-titles
+            for subTitleKey in contentListDict[mainTitleKey]:
+                outputFile.write("\t" + subTitleKey + "\n")
         outputFile.close()                          ## Close the file and save the output
         print(">> Output Saved!")
     except (OSError, IOError) as e:
