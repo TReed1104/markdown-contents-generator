@@ -9,6 +9,9 @@ def generateContentsList(markDownTitleList):
     generatedContentsList = {}
     chapterCount = 0
     lastTitle = ""
+    ## Iterate through each title and generate its entry in the contents list
+    for title in markDownTitleList:
+        print(title)
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
