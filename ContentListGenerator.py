@@ -11,7 +11,11 @@ def generateContentsList(markDownTitleList):
     lastTitle = ""
     ## Iterate through each title and generate its entry in the contents list
     for title in markDownTitleList:
-        print(title)
+        ## Check if the title is a chapter title
+        if title.count('#') == 2:
+            chapterCount += 1
+            titleName = title.replace('##', '').strip()
+            titleNameTag = re.sub(r'([^\s\w]|_)+', '', titleName).lower().replace(' ', '-')
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
