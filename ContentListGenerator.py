@@ -10,6 +10,7 @@ def generateContentsList(markDownTitleList):
 
 ## Extract the titles from the markdown
 def parseMarkdownFile(filePath):
+    print(">> Reading file...")
     markdownTitleList = []              ## List of all the found titles in the markdown file
     markdownFile = open(filePath, "r")  ## Open the markdown file
     ## Read the file
