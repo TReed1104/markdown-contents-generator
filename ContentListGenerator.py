@@ -53,7 +53,7 @@ def generateContentsList(markDownTitleList):
 def parseMarkdownFile(filePath):
     print(">> Reading file...")
     markdownTitleList = []              ## List of all the found titles in the markdown file
-    markdownFile = open(filePath, "r")  ## Open the markdown file
+    markdownFile = open(filePath, "r", encoding="utf-8")  ## Open the markdown file
     ## Read the file
     for line in markdownFile:
         ## If the line starts with a title marker
